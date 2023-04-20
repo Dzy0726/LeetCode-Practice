@@ -91,3 +91,21 @@ public:
 // count =2 [2,2,2,2,2,2,2] 3 [1,1,1,1,1,1,1,1] nums-1= 7
 
 // 
+class Solution {
+public:
+    int minSubArrayLen(int target, vector<int>& nums) {
+        int sum = 0;
+        int sublength = 0;
+        int result = INT_MAX;
+        int i = 0;
+        for(int j = 0; j < nums.size(); j++) {
+            sum += nums[j];
+            while(sum >= target) {
+                sublength = j - i + 1;
+                result = result < sublength ? result : sublength;
+                sum -= nums[i++];
+            }
+        }
+        return result == INT_MAX ? 0 :result ;
+    }
+};
