@@ -2,7 +2,7 @@
  * @Author: Zhenyu Dong
  * @Date: 2023-04-27 16:32:28
  * @LastEditors: Zhenyu Dong
- * @LastEditTime: 2023-04-27 16:33:22
+ * @LastEditTime: 2023-04-27 16:35:30
  * @FilePath: /19.删除链表的倒数第N个节点/deleteNnode.cpp
  * @Description: 
  * @
@@ -10,6 +10,7 @@
  */
 class Solution {
 public:
+
     struct ListNode {
         int val;
         ListNode *next;
@@ -17,6 +18,7 @@ public:
         ListNode(int x) : val(x), next(nullptr) {}
         ListNode(int x, ListNode *next) : val(x), next(next) {}
     };
+
     ListNode* removeNthFromEnd(ListNode* head, int n) {
         ListNode * dummyHead = new ListNode();
         dummyHead->next = head;
