@@ -4,6 +4,9 @@
         "array": "cpp",
         "string_view": "cpp",
         "initializer_list": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "string": "cpp",
+        "deque": "cpp",
+        "vector": "cpp"
     }
 }
