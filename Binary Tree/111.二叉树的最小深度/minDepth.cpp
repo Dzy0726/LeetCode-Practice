@@ -1,3 +1,4 @@
+// 迭代
 class Solution {
 public:
     int minDepth(TreeNode* root) {
@@ -22,5 +23,24 @@ public:
             depth++;
         }
         return depth;
+    }
+};
+
+
+// 递归
+class Solution {
+public:
+    int minDepth(TreeNode* root) {
+        if (root == NULL) return 0;
+        int leftDepth = minDepth(root -> left);
+        int rightDepth = minDepth(root -> right);
+        if (root -> left == NULL && root -> right != NULL) {
+            return 1 + rightDepth;
+        } 
+        if (root -> left != NULL && root -> right == NULL) {
+            return 1 + leftDepth;
+        } 
+        int min_depth = 1 + min(leftDepth, rightDepth);
+        return min_depth;
     }
 };
