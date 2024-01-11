@@ -1,3 +1,4 @@
+// 层序遍历，迭代法
 class Solution {
 public:
     int maxDepth(TreeNode* root) {
@@ -15,5 +16,17 @@ public:
             depth++;
         }
         return depth;
+    }
+};
+
+// 后序遍历，递归法
+class Solution {
+public:
+    int maxDepth(TreeNode* root) {
+        if (root == NULL) return 0;
+        int leftHeight = maxDepth(root -> left);
+        int rightHeight = maxDepth(root -> right);
+        int height = 1 + max(leftHeight, rightHeight);
+        return height;
     }
 };
