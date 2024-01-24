@@ -234,6 +234,6 @@ public:
 
 ### 学习与小结
 
-这题做的还不错，思路清晰，图也画的没问题~used数组真好用
+这题做的还不错，思路清晰，图也画的没问题，used数组真好用~
 
 ![img](https://pkdwxagc9o.feishu.cn/space/api/box/stream/download/asynccode/?code=NDAzNTE2NWFlMjIzNzFlZjYyNDU0YWRmOTEyZmUxOThfMTUza3BKdUlta1ExZFFkY250cjF2SnlTTGRybVB0ZlRfVG9rZW46UDR0d2JUSUlqbzdQZFN4R3cyU2NEdTFWbkFoXzE3MDYwNzg2MjQ6MTcwNjA4MjIyNF9WNA)
