@@ -19,6 +19,7 @@
         "streambuf": "cpp",
         "tuple": "cpp",
         "ios": "cpp",
-        "__split_buffer": "cpp"
+        "__split_buffer": "cpp",
+        "algorithm": "cpp"
     }
 }
