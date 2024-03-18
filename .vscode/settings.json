@@ -25,6 +25,7 @@
         "limits": "cpp",
         "random": "cpp",
         "iosfwd": "cpp",
-        "iterator": "cpp"
+        "iterator": "cpp",
+        "queue": "cpp"
     }
 }
