@@ -1,35 +1,13 @@
-#include <algorithm>
-#include <climits>
-#include <iostream>
-#include <vector>
-using namespace std;
+/*
+ 能否熟练使用Ctrl+C和Ctrl+V决定了日常开发的效率，所以现在需要探寻最高效的CV操作。目前有含有一个字符A的文本，有以下四种操作：①Ctrl+A，全选目前文本；②Ctrl+S，选择单个文本；③Ctrl+C，复制所选文本；④Ctrl+V，粘贴所复制的文本。给定一组目标数量，求每一组通过上述4种操作得到目标文本数量的最少操作次数。
 
-int main() {
-    int N; 
-    cin >> N;
-    vector<int> aimLength;
-    while (N--) {
-        int x; 
-        cin >> x;
-        aimLength.push_back(x);
-    }
-    int max_value = *max_element(aimLength.begin(), aimLength.end()) + 1;
-    vector<int> dp(max_value, INT_MAX);
-    dp[0] = 0;
-    dp[1] = 0;
-    for (int i = 1; i <= max_value; i++) {
-        for (int j = 1; j < i; j++) {
-            if (i % j == 0) {
-                int count = 2; // A+C
-                int pastes = (i / j) - 1;
-                count += pastes;
-                dp[i] = min(dp[i], dp[j] + count);
-            }
-        }
-    }
-    for (int i = 0; i < aimLength.size(); i++) {
-        cout << dp[aimLength[i]] << endl;
-    }
+       补充说明：Ctrl+V操作会自动把复制的文本粘贴到文档最后；Ctrl+C之后允许连续Ctrl+V进行粘贴。
 
-    return 0;
-}
+       例如，对于目标数量为3的时候，最少操作次数为4（Ctrl+A，Ctrl+C，Ctrl+V，Ctrl+V）.
+
+       对于目标数量为8的时候，最少操作次数为8（Ctrl+A，Ctrl+C，Ctrl+V，Ctrl+A，Ctrl+C，Ctrl+V，Ctrl+V，Ctrl+V）
+
+       第一行输入为一个正整数T，代表需要计算操作次数的组数，后续有T个正整数输入，M1，M2…MT，其中0<T<100，0 < M1，M2…MT < 16384。
+
+       输出T个正整数N，代表对应的操作次数。
+*/
