@@ -23,6 +23,12 @@
         "algorithm": "cpp",
         "chrono": "cpp",
         "limits": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "iosfwd": "cpp",
+        "iterator": "cpp",
+        "queue": "cpp",
+        "__hash_table": "cpp",
+        "bitset": "cpp",
+        "ranges": "cpp"
     }
 }
