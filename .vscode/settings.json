@@ -29,6 +29,7 @@
         "queue": "cpp",
         "__hash_table": "cpp",
         "bitset": "cpp",
-        "ranges": "cpp"
+        "ranges": "cpp",
+        "csignal": "cpp"
     }
 }
