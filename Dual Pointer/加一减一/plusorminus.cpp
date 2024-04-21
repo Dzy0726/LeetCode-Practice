@@ -27,29 +27,36 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
     int n, k;
     cin >> n >> k;
     vector<int> nums(n);
-    for (int i = 0; i < n; ++i) {
+    for (int i = 0; i < n; ++i)
+    {
         cin >> nums[i];
     }
 
     int result = INT_MAX;
-    for (int x = 0; x <= 9; ++x) {
+    for (int x = 0; x <= 9; ++x)
+    {
         int opTimes = 0;
         int left = 0;
-        for (int right = 0; right < n; ++right) {
-          opTimes += abs(nums[right] - x);
-          while (right - left + 1 > k) {
-            opTimes -= abs(nums[left] - x);
-            left++;
-          }
-          if (right - left + 1 == k) {
-            if (opTimes < result) {
-              result = opTimes;
+        for (int right = 0; right < n; ++right)
+        {
+            opTimes += abs(nums[right] - x);
+            while (right - left + 1 > k)
+            {
+                opTimes -= abs(nums[left] - x);
+                left++;
             }
-          }
+            if (right - left + 1 == k)
+            {
+                if (opTimes < result)
+                {
+                    result = opTimes;
+                }
+            }
         }
     }
     cout << result << endl;
