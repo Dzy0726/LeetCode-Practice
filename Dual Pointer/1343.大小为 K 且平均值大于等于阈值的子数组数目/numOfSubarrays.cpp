@@ -1,3 +1,13 @@
+/*** 
+ * @Author: Zhenyu Dong
+ * @Date: 2024-04-26 22:59:21
+ * @LastEditors: Zhenyu Dong
+ * @LastEditTime: 2024-04-26 22:59:36
+ * @FilePath: \LeetCode-Practice\Dual Pointer\1343.大小为 K 且平均值大于等于阈值的子数组数目\numOfSubarrays.cpp
+ * @Description: 
+ * @
+ * @Copyright (c) 2024 by Zhenyu Dong, All Rights Reserved. 
+ */
 class Solution {
 public:
     int numOfSubarrays(vector<int>& arr, int k, int threshold) {
